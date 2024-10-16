@@ -12,7 +12,7 @@ La aplicación incluye las siguientes funcionalidades:
 
 1. [Verificar Validez del Entorno](#1-verificar-validez-del-entorno)
 2. [Entrenar un Modelo (Cronometrado)](#2-entrenar-un-modelo-cronometrado)
-3. [Entrenar Todos los Algoritmos (A2C, DQN, PPO, QR-DQN, TRPO)](#3-entrenar-todos-los-algoritmos-a2c-dqn-ppo-qr-dqn-trpo)
+3. [Entrenar Todos los Algoritmos](#3-entrenar-todos-los-algoritmos)
 4. [Eliminar Todos los Agentes Entrenados](#4-eliminar-todos-los-agentes-entrenados)
 5. [Aplicar Aprendizaje por Transferencia (Entre entornos con diferentes cantidades de jugadores)](#5-aplicar-aprendizaje-por-transferencia-entre-entornos-con-diferentes-cantidades-de-jugadores)
 6. [Eliminar Todos los Agentes de Aprendizaje por Transferencia](#6-eliminar-todos-los-agentes-de-aprendizaje-por-transferencia)
@@ -41,7 +41,7 @@ pip install numpy gymnasium pygame stable-baselines3 sb3-contrib
 Asegúrate de tener la siguiente estructura de carpetas para los modelos entrenados:
 
 ```text
-SushiGo/
+sushi-go-RL-agents/
 │
 └───Training/
     └───Model/
@@ -65,7 +65,7 @@ Adicionalmente, en esta carpeta se presentan los agentes entrenados durante 1.2M
 Para ejecutar la aplicación, utiliza el siguiente comando en tu terminal o consola de Python:
 
 ```bash
-python ./sushi_go_v7.py
+python ./rl_sushi_go_main.py
 ```
 
 Este comando iniciará el programa, donde podrás seleccionar las opciones mencionadas anteriormente para entrenar, probar o jugar con los agentes RL o basados en reglas.
@@ -115,23 +115,25 @@ Al ejecutar la aplicación, te muestra un menú con diversas opciones numeradas 
 
 #### 7. Probar Agentes RL 
    Permite probar los agentes RL almacenados en la carpeta `Training/Model/` para evaluar su desempeño en el entorno de Sushi Go! y también jugar como humano, interactuando con los agentes a través de una interfaz gráfica desarrollada con Pygame. Si no hay jugadores humanos, se puede ver el desarrollo completo de la partida, incluyendo las manos de todos los participantes. Para ello, debes especificar:
-     - **Número de jugadores.**
-     - **Modo de renderizado**:
-         - `print`: Modo consola, donde se imprime el estado completo del juego, incluyendo las manos de los demás, para la comprobación de la correctitud de la lógica del juego.
-         - `pygame`: Modo visual interactivo con gráficos. Cuando no hay jugadores humanos se pueden observar todas las manos.
-     - **Modelo de RL** (para el Player0): de entre los disponibles en la carpeta `Training/Model/`.
-     - **Modo de los jugadores oponentes:** 
-         - `RLAgent`: Un agente entrenado con Aprendizaje por Refuerzo (en la carpeta `Training/Model/`).
-         - `RuleAgent`: Un agente basado en reglas.
-         - `random`: Un agente que juega aleatoriamente.
-         - `human`: Un jugador humano.
-         
-   Notas:
-      - El jugador 0 siempre será un modelo de RL. 
-      - Cuando no hay jugadores humanos, puedes avanzar en el juego presionando la tecla espacio. Además, puedes visualizar las demás manos haciendo clic en las flechas o utilizando las teclas de flecha derecha y flecha izquierda para moverte entre ellas.
-      - Cuando hay jugadores humanos se avanza mediante la tecla del espacio o haciendo click en el botón de Listo.
-      - Una vez se muestren los resultados de la partida, deberás pulsar espacio para continuar.
-      - Si deseas cerrar la aplicación en cualquier momento durante el juego, puedes presionar la X en la ventana de Pygame.
+   
+   - **Número de jugadores.**
+   - **Modo de renderizado**:
+       - `print`: Modo consola, donde se imprime el estado completo del juego, incluyendo las manos de los demás, para la comprobación de la correctitud de la lógica del juego.
+       - `pygame`: Modo visual interactivo con gráficos. Cuando no hay jugadores humanos se pueden observar todas las manos.
+    
+   - **Modelo de RL** (para el Player0): de entre los disponibles en la carpeta `Training/Model/`.
+   - **Modo de los jugadores oponentes:**
+       - `RLAgent`: Un agente entrenado con Aprendizaje por Refuerzo (en la carpeta `Training/Model/`).
+       - `RuleAgent`: Un agente basado en reglas.
+       - `random`: Un agente que juega aleatoriamente.
+       - `human`: Un jugador humano.
+
+Notas:
+- El jugador 0 siempre será un modelo de RL.
+- Cuando no hay jugadores humanos, puedes avanzar en el juego presionando la tecla espacio. Además, puedes visualizar las demás manos haciendo clic en las flechas o utilizando las teclas de flecha derecha y flecha izquierda para moverte entre ellas.
+- Cuando hay jugadores humanos se avanza mediante la tecla del espacio o haciendo click en el botón de Listo.
+- Una vez se muestren los resultados de la partida, deberás pulsar espacio para continuar.
+- Si deseas cerrar la aplicación en cualquier momento durante el juego, puedes presionar la X en la ventana de Pygame.
    
 
 #### 8. Probar Agentes Basados en Reglas 
@@ -148,10 +150,6 @@ Este repositorio no solo contiene el código necesario para entrenar y evaluar a
 
 En la carpeta `docs/`, encontrarás un **resumen del trabajo** que describe en detalle los pasos seguidos para desarrollar este proyecto, y los resultados obtenidos. 
 
-Este resumen está pensado para ofrecer una visión general del proyecto y los resultados obtenidos durante el proceso de desarrollo.
-
 #### 2. Resumen de Sutton & Barto (Reinforcement Learning: An Introduction)
 
-Además, el repositorio incluye un **resumen de los conceptos clave de "Reinforcement Learning: An Introduction"** de Sutton & Barto, uno de los textos fundamentales en el campo del Aprendizaje por Refuerzo. Este resumen abarca los siguientes temas:
-
-Este material es ideal para aquellos que buscan profundizar en los conceptos teóricos detrás del trabajo realizado y entender mejor los algoritmos que se han aplicado en el proyecto.
+Además, el repositorio incluye un **resumen de los conceptos clave de "Reinforcement Learning: An Introduction"** de Sutton & Barto, uno de los textos fundamentales en el campo del Aprendizaje por Refuerzo. Este material es ideal para aquellos que buscan profundizar en los conceptos teóricos detrás del trabajo realizado.
