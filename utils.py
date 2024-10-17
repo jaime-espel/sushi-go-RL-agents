@@ -1,0 +1,59 @@
+PUDIN = 0
+MAKI_1 = 1
+MAKI_2 = 2
+MAKI_3 = 3
+WASABI = 4
+NIGIRI_TORTILLA = 5
+NIGIRI_SALMON = 6
+NIGIRI_CALAMAR = 7
+TEMPURA = 8
+SASHIMI = 9
+GYOZA = 10
+PALILLOS = 11
+NIGIRI_TORTILLA_WASABI = 12
+NIGIRI_SALMON_WASABI = 13
+NIGIRI_CALAMAR_WASABI = 14
+
+# NIGIRI to NIGIRI + WASABI
+wasabi_versions = {
+    NIGIRI_TORTILLA: NIGIRI_TORTILLA_WASABI,
+    NIGIRI_SALMON: NIGIRI_SALMON_WASABI,
+    NIGIRI_CALAMAR: NIGIRI_CALAMAR_WASABI
+}
+
+wasabi_inverse_versions = {
+    NIGIRI_TORTILLA_WASABI: NIGIRI_TORTILLA,
+    NIGIRI_SALMON_WASABI: NIGIRI_SALMON,
+    NIGIRI_CALAMAR_WASABI: NIGIRI_CALAMAR
+}
+
+CARDS = {
+    PUDIN: 'Pudin',
+    MAKI_1: 'Maki-1',
+    MAKI_2: 'Maki-2',
+    MAKI_3: 'Maki-3',
+    WASABI: 'Wasabi',
+    NIGIRI_TORTILLA: 'Nigiri-Tortilla',
+    NIGIRI_SALMON: 'Nigiri-Salmón',
+    NIGIRI_CALAMAR: 'Nigiri-Calamar',
+    TEMPURA: 'Tempura',
+    SASHIMI: 'Sashimi',
+    GYOZA: 'Gyoza',
+    PALILLOS: 'Palillos',
+    NIGIRI_TORTILLA_WASABI: 'Nigiri-Tortilla + Wasabi',
+    NIGIRI_SALMON_WASABI: 'Nigiri-Salmón + Wasabi',
+    NIGIRI_CALAMAR_WASABI: 'Nigiri-Calamar + Wasabi'
+}
+
+DECK = [TEMPURA] * 14 + [SASHIMI] * 14 + [GYOZA] * 14 + \
+       [MAKI_2] * 12 + [MAKI_3] * 8  + [MAKI_1] * 6  + \
+       [NIGIRI_SALMON] * 10 + [NIGIRI_CALAMAR] * 5  + [NIGIRI_TORTILLA] * 5  + \
+       [PUDIN] * 10 + [WASABI] * 6  + [PALILLOS] * 4  
+
+INITIAL = 0
+IN_GAME = 1
+
+LISTO_VERDE = 0
+LISTO_AMARILLO = 1
+LISTO_GRIS = 2
+
