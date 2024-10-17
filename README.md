@@ -55,8 +55,8 @@ Proyecto/
     └───All_Models/
     └───TransferLearning/
 ``` -->
-
-- **`Training/Model/`**: Aquí es donde deben colocarse los modelos RL para ser probados y evaluados. Los modelos entrenados con las opciones 3 y 5 deben moverse manualmente a este directorio para ser probados con las opciones 7 y 8.
+> [!IMPORTANT]
+> - **`Training/Model/`**: Aquí es donde deben colocarse los modelos RL para ser probados y evaluados. Los modelos entrenados con las opciones 3 y 5 deben moverse manualmente a este directorio para ser usados en las funcionalidades 7 y 8.
 Adicionalmente, en esta carpeta se presentan los agentes entrenados durante 1.2M de episodios, o partidas, en los entornos de 2 y 5 jugadores para cada uno de los algoritmos mencionados anteriormente.
 
 
@@ -128,12 +128,12 @@ Al ejecutar la aplicación, te muestra un menú con diversas opciones numeradas 
        - `random`: Un agente que juega aleatoriamente.
        - `human`: Un jugador humano.
 
-Notas:
-- El jugador 0 siempre será un modelo de RL.
-- Cuando no hay jugadores humanos, puedes avanzar en el juego presionando la tecla espacio. Además, puedes visualizar las demás manos haciendo clic en las flechas o utilizando las teclas de flecha derecha y flecha izquierda para moverte entre ellas.
-- Cuando hay jugadores humanos se avanza mediante la tecla del espacio o haciendo click en el botón de Listo.
-- Una vez se muestren los resultados de la partida, deberás pulsar espacio para continuar.
-- Si deseas cerrar la aplicación en cualquier momento durante el juego, puedes presionar la X en la ventana de Pygame.
+> [!NOTE]
+> - El jugador 0 siempre será un modelo de RL.
+> - Cuando no hay jugadores humanos, puedes avanzar en el juego presionando la tecla espacio. Además, puedes visualizar las demás manos haciendo clicK en las flechas o utilizando las teclas de flecha derecha y flecha izquierda para moverte entre ellas.
+> - Cuando hay jugadores humanos se avanza mediante la tecla del espacio o haciendo click en el botón de Listo.
+> - Una vez se muestren los resultados de la partida, deberás pulsar espacio para continuar.
+> - Si deseas cerrar la aplicación en cualquier momento durante el juego, puedes presionar la X en la ventana de Pygame.
    
 
 #### 8. Probar Agentes Basados en Reglas 
