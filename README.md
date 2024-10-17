@@ -130,7 +130,7 @@ Al ejecutar la aplicación, te muestra un menú con diversas opciones numeradas 
 
 > [!NOTE]
 > - El jugador 0 siempre será un modelo de RL.
-> - Cuando no hay jugadores humanos, puedes avanzar en el juego presionando la tecla espacio. Además, puedes visualizar las demás manos haciendo clicK en las flechas o utilizando las teclas de flecha derecha y flecha izquierda para moverte entre ellas.
+> - Cuando no hay jugadores humanos, puedes avanzar en el juego presionando la tecla espacio. Además, puedes visualizar las demás manos haciendo click en las flechas o utilizando las teclas de flecha derecha y flecha izquierda para moverte entre ellas.
 > - Cuando hay jugadores humanos se avanza mediante la tecla del espacio o haciendo click en el botón de Listo.
 > - Una vez se muestren los resultados de la partida, deberás pulsar espacio para continuar.
 > - Si deseas cerrar la aplicación en cualquier momento durante el juego, puedes presionar la X en la ventana de Pygame.
