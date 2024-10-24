@@ -1683,6 +1683,7 @@ if __name__ == "__main__":
                 env.players[0].player_mode = "RLAgent"
                 
                 # Obtain the model for P0
+                print('\nSelect model for Player0')
                 try: model = obtain_model(env)
                 except FileNotFoundError: print('\nNo models available!')
                 else:
@@ -1716,6 +1717,7 @@ if __name__ == "__main__":
                 env = SushiGoEnv(num_players=num_players)
                 # Player modes
                 env.players[0].player_mode = "rules"
+                print('\nPlayer0 is a rule-based agent')
 
                 # Choose opponent modes
                 print(f'Choose opponent modes:')
