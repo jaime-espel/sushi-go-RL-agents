@@ -121,12 +121,15 @@ Al ejecutar la aplicación, te muestra un menú con diversas opciones numeradas 
        - `print`: Modo consola, donde se imprime el estado completo del juego, incluyendo las manos de los demás, para la comprobación de la correctitud de la lógica del juego.
        - `pygame`: Modo visual interactivo con gráficos. Cuando no hay jugadores humanos se pueden observar todas las manos.
     
-   - **Modelo de RL** (para el Player0): de entre los disponibles en la carpeta `Training/Model/`.
+   - **Modelo de RL para el Player0**: de entre los disponibles en la carpeta `Training/Model/`.
    - **Modo de los jugadores oponentes:**
-       - `RLAgent`: Un agente entrenado con Aprendizaje por Refuerzo (en la carpeta `Training/Model/`).
-       - `RuleAgent`: Un agente basado en reglas.
-       - `random`: Un agente que juega aleatoriamente.
-       - `human`: Un jugador humano.
+       - `All Random`: Todos los oponentes juegan de manera aleatoria.
+       - `All Rules`: Todos los oponentes son agentes basados en reglas.
+       - `Customized`: Permite seleccionar para cada oponente un modo específico:
+           - `RLAgent`: Un agente entrenado con Aprendizaje por Refuerzo (en la carpeta `Training/Model/`).
+           - `RuleAgent`: Un agente basado en reglas.
+           - `random`: Un agente que juega aleatoriamente.
+           - `human`: Un jugador humano.
 
 > [!NOTE]
 > - El jugador 0 siempre será un modelo de RL.
